@@ -1,0 +1,7 @@
+# $WILDFLY_HOME/bin/jboss-cli.sh --file=/path/to/this/file.
+embed-server
+batch
+
+data-source add --name=${env.MYSQL_DATASOURCE_NAME} --driver-name=${env.MYSQL_DATASOURCE_DRIVER_NAME} --jndi-name=${env.MYSQL_DATASOURCE_JNDI_NAME} --connection-url="${env.MYSQL_DATASOURCE_URL}" --user-name=${env.MYSQL_DATASOURCE_USER} --password=${env.MYSQL_DATASOURCE_PASSWORD} --use-ccm=false --max-pool-size=${env.MYSQL_DATASOURCE_MAX_POOL_SIZE} --blocking-timeout-wait-millis=${env.MYSQL_DATASOURCE_BLOCK_TIMEOUT} --enabled=true
+
+run-batch

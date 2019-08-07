@@ -1,0 +1,7 @@
+# $WILDFLY_HOME/bin/jboss-cli.sh --file=/path/to/this/file.
+embed-server
+batch
+
+deploy --name=mysql /opt/jboss/mysql.jar 
+
+run-batch
